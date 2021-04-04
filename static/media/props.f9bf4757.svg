@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+ <g>
+  <line fill="none" id="svg_6" stroke="#9E9E9E" x1="6.699998" x2="6.699998" y1="1.499999" y2="39.113811"/>
+  <line fill="none" id="svg_8" stroke="#9E9E9E" x1="20.399999" x2="20.399999" y1="1.293094" y2="38.906906"/>
+  <line fill="none" id="svg_9" stroke="#9E9E9E" x1="34.999997" x2="34.999997" y1="1.093094" y2="38.706906"/>
+  <circle cx="6.799998" cy="35.1" fill="none" id="svg_10" r="3.623534" stroke="#9E9E9E"/>
+  <circle cx="20.4" cy="18.9" fill="none" id="svg_12" r="3.623533" stroke="#9E9E9E"/>
+  <circle cx="35.2" cy="4.8" fill="none" id="svg_13" r="3.623533" stroke="#9E9E9E"/>
+ </g>
+</svg>
