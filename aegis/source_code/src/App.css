@@ -1,0 +1,326 @@
+body {
+  overflow: hidden; }
+
+.mapContainer {
+  height: 100vh;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0; }
+
+.instrument {
+  width: 380px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 15px;
+  margin-top: 10px;
+  border: solid 1px black; }
+  .instrument .instrumentIcon {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin-top: 10px; }
+  .instrument .instrumentTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around; }
+    .instrument .instrumentTextContainer .instrumentName {
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: black; }
+    .instrument .instrumentTextContainer .instrumentDescription {
+      padding: 0;
+      margin: 0;
+      color: gray;
+      font-size: 14px; }
+
+.layerButton {
+  width: 380px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  border: solid 1px black; }
+  .layerButton .layerType {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px; }
+  .layerButton .layerName {
+    width: 50%;
+    height: 30px;
+    margin: 0; }
+  .layerButton .layerEditButton {
+    width: 25px;
+    height: 25px; }
+  .layerButton .layerVisibilityButton {
+    margin-left: 5px;
+    width: 25px;
+    height: 25px; }
+  .layerButton .layerParamsButton {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px; }
+
+.sidebarMenu {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: flex-start;
+  float: left;
+  max-width: 40px;
+  max-height: 100vh;
+  min-height: 100vh;
+  min-width: 40px;
+  width: 490px;
+  height: 100vh;
+  background: #4D96BB;
+  z-index: 200;
+  opacity: 0.8; }
+  .sidebarMenu .buttonContainer {
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 80px; }
+    .sidebarMenu .buttonContainer .sidebarButton {
+      margin-left: 5px;
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px; }
+
+.drawer {
+  width: 410px;
+  min-height: 100vh;
+  height: 100vh;
+  z-index: 200;
+  left: 40px;
+  position: absolute;
+  background: white;
+  display: block; }
+  .drawer .toggleGSViewerButton {
+    max-width: 40px;
+    max-height: 40px; }
+    .drawer .toggleGSViewerButton img {
+      padding: 5px;
+      width: 30px;
+      height: 30px; }
+  .drawer .drawerHeader {
+    width: 100%;
+    min-height: 12vh;
+    height: 12vh;
+    top: 8px; }
+    .drawer .drawerHeader .drawerHeaderTopContainer {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-content: space-around; }
+      .drawer .drawerHeader .drawerHeaderTopContainer .drawerHeaderTitle {
+        margin: 0;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: 500;
+        width: 45%; }
+      .drawer .drawerHeader .drawerHeaderTopContainer .drawerHeaderButtonContainer {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        min-height: 100%;
+        width: 55%;
+        transition: opacity 0.3s linear; }
+        .drawer .drawerHeader .drawerHeaderTopContainer .drawerHeaderButtonContainer .drawerHeaderButton {
+          width: 40px;
+          height: 40px;
+          z-index: 500;
+          transition: opacity 0.3s linear; }
+          .drawer .drawerHeader .drawerHeaderTopContainer .drawerHeaderButtonContainer .drawerHeaderButton img {
+            padding: 5px;
+            width: 30px;
+            height: 30px; }
+    .drawer .drawerHeader .drawerHeaderDescription {
+      margin-left: 5px;
+      vertical-align: bottom; }
+  .drawer .drawerContent {
+    width: 100%;
+    min-height: 88vh;
+    height: 88vh;
+    top: 12vh; }
+    .drawer .drawerContent .contentHeader {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; }
+      .drawer .drawerContent .contentHeader .contentName {
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 24px;
+        font-weight: 600; }
+      .drawer .drawerContent .contentHeader .newLayerButton {
+        width: 30px;
+        height: 30px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        margin-right: 40px; }
+    .drawer .drawerContent .contentContainer {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column; }
+
+.open {
+  max-width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear; }
+
+.closed {
+  visibility: hidden;
+  opacity: 0;
+  max-width: 0%;
+  transition: opacity 0.3s linear; }
+
+.cabinet {
+  width: 1800px;
+  left: 100px;
+  position: absolute;
+  background: white;
+  z-index: 300;
+  display: block;
+  top: 1vh;
+  height: 98vh; }
+  .cabinet .cabinetHeader {
+    height: 18%; }
+    .cabinet .cabinetHeader .catalogHeader {
+      display: flex;
+      flex-direction: column; }
+      .cabinet .cabinetHeader .catalogHeader .catalogNav {
+        display: flex;
+        flex-direction: row;
+        align-self: center; }
+        .cabinet .cabinetHeader .catalogHeader .catalogNav .catalogNavItem {
+          padding: 16px; }
+      .cabinet .cabinetHeader .catalogHeader .catalogTools {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .cabinet .cabinetHeader .catalogHeader .catalogTools * {
+          margin: 24px; }
+        .cabinet .cabinetHeader .catalogHeader .catalogTools input {
+          width: 256px; }
+        .cabinet .cabinetHeader .catalogHeader .catalogTools div {
+          background: #4D96BB;
+          padding: 8px 24px 8px 24px;
+          color: white;
+          font-weight: 600;
+          font-variant: small-caps; }
+  .cabinet .cabinetContent {
+    height: 82%; }
+    .cabinet .cabinetContent .catalogContent {
+      border-top: solid 1px gray;
+      display: block;
+      width: 100%;
+      height: 100%; }
+      .cabinet .cabinetContent .catalogContent .catalogGrid {
+        padding-top: 40px;
+        display: grid;
+        justify-content: center;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto; }
+        .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem {
+          display: flex;
+          flex-direction: column; }
+          .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem .catalogItemImage {
+            width: 350px;
+            height: 165px;
+            align-self: center; }
+          .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem .catalogDataContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; }
+            .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem .catalogDataContainer .catalogItemName {
+              font-size: 24px;
+              font-weight: 600;
+              margin-left: 20px; }
+            .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem .catalogDataContainer .catalogMoreButton img {
+              width: 30px;
+              height: 30px; }
+          .cabinet .cabinetContent .catalogContent .catalogGrid .catalogItem .catalogItemDescription {
+            font-size: 14px;
+            margin-left: 20px; }
+
+.layerEditor {
+  width: 90vw;
+  left: 7vw;
+  position: absolute;
+  background: white;
+  z-index: 300;
+  display: block;
+  top: 1vh;
+  height: 98vh;
+  border: solid 2px rgba(220, 220, 220, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .layerEditor .layerEditorHeader {
+    width: 100%;
+    height: 10%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .layerEditor .layerEditorHeader .layerEditorHeaderTitle {
+      margin-left: 4vw; }
+    .layerEditor .layerEditorHeader .layerEditorCloseButton {
+      width: 2vw;
+      height: 2vw;
+      margin-right: 4vw;
+      margin-top: 0.5vh;
+      background-repeat: no-repeat;
+      background-size: contain; }
+  .layerEditor .layerEditorContent {
+    background: rgba(192, 192, 192, 0.2);
+    min-height: 90%;
+    margin-left: 4vw;
+    margin-right: 4vw; }
+
+.customMessageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 74vw;
+  height: 80vh;
+  position: absolute;
+  left: 25vw;
+  top: 15vh;
+  background: #404040;
+  z-index: 400;
+  color: white; }
+  .customMessageBox .messageTitle {
+    align-self: flex-start;
+    width: 100%;
+    height: 20%;
+    padding: 0;
+    margin: 0; }
+  .customMessageBox .messageContent {
+    width: 100%;
+    height: 80%;
+    padding: 0;
+    margin: 0; }
